@@ -30,16 +30,16 @@ namespace GameConsult1.Models
 
         public Person()
         {
-            GameSessionsPlayers = new List<GameSessionPlayer>();
-            PersonSpells = new List<PersonSpell>();
-            PersonItems = new List<PersonItem>();
+            GameSessions = new List<GameSession>();
+            Spells = new List<Spell>();
+            Items = new List<Item>();
         }
         [JsonIgnore]
-        public virtual ICollection<GameSessionPlayer> GameSessionsPlayers { get; set; }
+        public virtual ICollection<GameSession> GameSessions { get; set; }
         [JsonIgnore]
-        public virtual ICollection<PersonSpell> PersonSpells { get; set; }
+        public virtual ICollection<Spell> Spells { get; set; }
         [JsonIgnore]
-        public virtual ICollection<PersonItem> PersonItems {get; set; }
+        public virtual ICollection<Item> Items {get; set; }
 
     }
 }

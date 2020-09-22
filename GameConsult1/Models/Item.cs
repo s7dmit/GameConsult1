@@ -14,10 +14,10 @@ namespace GameConsult1.Models
     
         public Item()
         {
-            PersonItems = new List<PersonItem>();
+            People = new List<Person>();
         }
         [JsonIgnore]
-        public virtual ICollection<PersonItem> PersonItems { get; set; }
+        public virtual ICollection<Person> People { get; set; }
 
     }
 }

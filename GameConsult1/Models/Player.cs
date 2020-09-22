@@ -10,6 +10,7 @@ namespace GameConsult1.Models
     {
         public string Name { get; set; }
         public bool Leading { get; set; }
+
         public int? GameCellId { get; set; }
         public GameCell GameCell { get; set; }
 

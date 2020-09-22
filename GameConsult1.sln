@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.1022
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameConsult1", "GameConsult1\GameConsult1.csproj", "{4DCCBB0F-9CB4-41C9-A47A-1CE60D598450}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameClient1", "GameClient1\GameClient1.csproj", "{8CCC1C45-17E1-4C23-AFE8-C347EFF7F655}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4DCCBB0F-9CB4-41C9-A47A-1CE60D598450}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DCCBB0F-9CB4-41C9-A47A-1CE60D598450}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DCCBB0F-9CB4-41C9-A47A-1CE60D598450}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CCC1C45-17E1-4C23-AFE8-C347EFF7F655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CCC1C45-17E1-4C23-AFE8-C347EFF7F655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CCC1C45-17E1-4C23-AFE8-C347EFF7F655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CCC1C45-17E1-4C23-AFE8-C347EFF7F655}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

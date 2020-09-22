@@ -8,12 +8,21 @@ namespace GameConsult1.Models
 {
     public class PersonContext:DbContext
     {
-            public DbSet<Person> People { get; set; }
+         public PersonContext()
+         {
+             base.Configuration.ProxyCreationEnabled = false;
+            //Configuration.LazyLoadingEnabled = false;
+         }
 
-        public System.Data.Entity.DbSet<GameConsult1.Models.Class> Classes { get; set; }
+        //public PersonContext() : base("People")
+        //{ }
 
-        public System.Data.Entity.DbSet<GameConsult1.Models.Player> Players { get; set; }
+        public DbSet<Person> People { get; set; }
 
-        public System.Data.Entity.DbSet<GameConsult1.Models.Race> Races { get; set; }
+        public DbSet<Class> Classes { get; set; }
+
+        public DbSet<Player> Players { get; set; }
+
+        public DbSet<Race> Races { get; set; }
     }
 }

@@ -13,10 +13,10 @@ namespace GameConsult1.Models
 
 public Spell()
         {
-            PersonSpells = new List<PersonSpell>();
+            People = new List<Person>();
         }
         [JsonIgnore]
-        public virtual ICollection<PersonSpell> PersonSpells { get; set; }
+        public virtual ICollection<Person> People { get; set; }
 
     }
 }

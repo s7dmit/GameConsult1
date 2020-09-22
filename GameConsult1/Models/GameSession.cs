@@ -13,10 +13,10 @@ namespace GameConsult1.Models
 
         public GameSession()
         {
-            GameSessionsPlayers = new List<GameSessionPlayer>();
+            People = new List<Person>();
         }
         [JsonIgnore]
-        public virtual ICollection<GameSessionPlayer> GameSessionsPlayers { get; set; }
+        public virtual ICollection<Person> People { get; set; }
 
     }
 }
