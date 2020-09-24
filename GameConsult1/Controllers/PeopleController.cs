@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using GameConsult1.Models;
+using Newtonsoft.Json;
 
 namespace GameConsult1.Controllers
 {
@@ -32,8 +33,7 @@ namespace GameConsult1.Controllers
             {
                 return NotFound();
             }
-
-            return Ok(person);
+            return Json(person, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
         }
 
         // PUT: api/People/5
