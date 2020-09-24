@@ -2,10 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Web;
 
 namespace GameConsult1.Models
 {
+    [KnownType(typeof(Person))]
     public class Person:BaseEntity
     {
         public int? PlayerId { get; set; }
@@ -13,10 +15,10 @@ namespace GameConsult1.Models
 
         public string Name { get; set; }
         public int Gender { get; set; }
-
+        //Связь один ко многим
         public int? RaceId { get; set; }
         public virtual Race Race { get; set; }
-
+        //Связь один ко многим
         public int? ClassId { get; set; }
         public virtual Class Class { get; set; }
 
@@ -28,16 +30,17 @@ namespace GameConsult1.Models
         public int Health { get; set; }
         public int Mana { get; set; }
 
+        //Связи многие-ко-многим
         public Person()
         {
             GameSessions = new List<GameSession>();
-            Spells = new List<Spell>();
+            Spells = new List<Player>();
             Items = new List<Item>();
         }
         [JsonIgnore]
         public virtual ICollection<GameSession> GameSessions { get; set; }
         [JsonIgnore]
-        public virtual ICollection<Spell> Spells { get; set; }
+        public virtual ICollection<Player> Spells { get; set; }
         [JsonIgnore]
         public virtual ICollection<Item> Items {get; set; }
 

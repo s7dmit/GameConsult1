@@ -19,8 +19,8 @@ namespace GameConsult1.Controllers
         // GET: api/People
         public IQueryable<Person> GetPeople()
         {
-            
-            return db.People.Include(p=>p.Spells);
+            return db.People;
+            //return db.People.Include(p=>p.Spells);
         }
 
         // GET: api/People/5

@@ -17,12 +17,16 @@ namespace GameConsult1.Models
         //public PersonContext() : base("People")
         //{ }
 
-        public DbSet<Person> People { get; set; }
+            //Класс контроллера
+        public DbSet<Person> People { get; set; } 
 
+        //Находится с Person в связи один ко многим (один класс у многих персонажей)
         public DbSet<Class> Classes { get; set; }
 
+        //Находится с Person в связи один ко многим
         public DbSet<Player> Players { get; set; }
 
+        //Находится с Person в связи один ко многим
         public DbSet<Race> Races { get; set; }
     }
 }
