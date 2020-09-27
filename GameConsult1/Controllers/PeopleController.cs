@@ -23,14 +23,20 @@ namespace GameConsult1.Controllers
             return db.People
                 .Include("Spells")
                 .Include("GameSessions")
-                .Include("Items");
+                .Include("Items")
+                .Include("Race");
         }
 
         // GET: api/People/5
         [ResponseType(typeof(Person))]
         public IHttpActionResult GetPerson(int id)
         {
-            Person person = db.People.Find(id);
+            Person person = db.People
+                .Include("Spells")
+                .Include("GameSessions")
+                .Include("Items")
+                .Include("Race")
+                .Where(p => p.Id == id).FirstOrDefault();
             if (person == null)
             {
                 return NotFound();
