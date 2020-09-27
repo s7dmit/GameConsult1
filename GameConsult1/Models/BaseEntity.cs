@@ -7,7 +7,9 @@ using System.Web;
 namespace GameConsult1.Models
 {
     [Serializable]
-
+    [KnownType(typeof(Spell))]
+    [KnownType(typeof(GameSession))]
+    [KnownType(typeof(Item))]
     [DataContract(IsReference = true)]
     public class BaseEntity
     {
