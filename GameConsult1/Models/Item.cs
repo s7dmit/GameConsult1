@@ -16,6 +16,7 @@ namespace GameConsult1.Models
         {
             People = new List<Person>();
         }
+
         [JsonIgnore]
         public virtual ICollection<Person> People { get; set; }
 
