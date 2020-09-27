@@ -14,7 +14,7 @@ namespace GameClient1
     {
         private static PlayerForm form1;
         private static GameSessionForm form2;
-        private static PersonForm form3;
+        private static ListPerson form3;
         private static RaceForm form4;
         private static ClassForm form5;
         private static ItemForm form6;
@@ -56,7 +56,7 @@ namespace GameClient1
         {
             if (form3 == null || form3.IsDisposed)
             {
-                form3 = new PersonForm();
+                form3 = new ListPerson();
                 form3.MdiParent = MainForm.ActiveForm;
                 form3.Show();
             }

@@ -11,13 +11,14 @@ namespace GameConsult1.Models
     public class Spell : BaseEntity
     {
         public string Title { get; set; }
-    public int LevelSpell { get; set; }
+        public int LevelSpell { get; set; }
 
         //многие ко многим
-public Spell()
+        public Spell()
         {
             People = new List<Person>();
         }
+
         [JsonIgnore]
         public virtual ICollection<Person> People { get; set; }
 

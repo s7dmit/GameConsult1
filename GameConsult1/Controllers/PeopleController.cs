@@ -20,7 +20,11 @@ namespace GameConsult1.Controllers
         // GET: api/People
         public IQueryable<Person> GetPeople()
         {
-            return db.People;
+            return db.People
+                .Include("Spells")
+                .Include("GameSessions")
+                .Include("Items")
+                .Include("Race");
             //return db.People.Include(p=>p.Spells);
         }
 
@@ -28,7 +32,13 @@ namespace GameConsult1.Controllers
         [ResponseType(typeof(Person))]
         public IHttpActionResult GetPerson(int id)
         {
-            Person person = db.People.Find(id);
+            //Person person = db.People.Find(id);
+            Person person = db.People
+                .Include("Spells")
+                .Include("GameSessions")
+                .Include("Items")
+                .Include("Race")
+            .Where(p => p.Id == id).FirstOrDefault();
             if (person == null)
             {
                 return NotFound();

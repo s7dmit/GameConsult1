@@ -13,24 +13,24 @@ using System.Windows.Forms;
 
 namespace GameClient1
 {
-    public partial class PersonForm : Form
+    public partial class ListPerson : Form
     {
-        public PersonForm()
+        public ListPerson()
         {
             InitializeComponent();
-        }
-
-        public PersonForm(MenuForm f)
-        {
-            InitializeComponent();
-            //f.BackColor = Color.Yellow;
         }
 
         const string _baseAddress = "http://localhost:17774/";
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             Update();
+        }
+
+        public ListPerson(MenuForm f)
+        {
+            InitializeComponent();
+            //f.BackColor = Color.Yellow;
         }
 
         private void Update()
@@ -47,7 +47,7 @@ namespace GameClient1
                 listView1.Items.Clear();
                 if (response.IsSuccessStatusCode)
                 {
-                    Person[] reports = response.Content.ReadAsAsync<Person[]>().Result;
+                    GameConsult1.Models.Person[] reports = response.Content.ReadAsAsync<GameConsult1.Models.Person[]>().Result;
 
                     foreach (var p in reports)
                     {
@@ -61,6 +61,11 @@ namespace GameClient1
                 }
             }
         }
-    }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PersonForm form = new PersonForm();
+            form.Show();
+            }
+        }
 }
-                
