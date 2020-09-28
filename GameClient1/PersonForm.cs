@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace GameClient1
 {
-    public partial class Form8 : Form
+    public partial class PersonForm : Form
     {
-        public Form8()
+        public PersonForm()
         {
             InitializeComponent();
+        }
+
+        public PersonForm(ListPerson f)
+        {
+            InitializeComponent();
+            //f.BackColor = Color.Yellow;
         }
     }
 }

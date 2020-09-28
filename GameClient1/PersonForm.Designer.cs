@@ -1,6 +1,6 @@
 ﻿namespace GameClient1
 {
-    partial class Form8
+    partial class PersonForm
     {
         /// <summary>
         /// Required designer variable.
@@ -52,6 +52,15 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.chListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.chListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.chListBox3 = new System.Windows.Forms.CheckedListBox();
+            this.btn1Print = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn2When = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -260,11 +269,101 @@
             this.label11.TabIndex = 23;
             this.label11.Text = "Мана";
             // 
-            // Form8
+            // chListBox1
+            // 
+            this.chListBox1.CheckOnClick = true;
+            this.chListBox1.FormattingEnabled = true;
+            this.chListBox1.Location = new System.Drawing.Point(398, 52);
+            this.chListBox1.Name = "chListBox1";
+            this.chListBox1.Size = new System.Drawing.Size(226, 88);
+            this.chListBox1.TabIndex = 24;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(394, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(101, 20);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Заклинания";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(394, 165);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(90, 20);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "Предметы";
+            // 
+            // chListBox2
+            // 
+            this.chListBox2.CheckOnClick = true;
+            this.chListBox2.FormattingEnabled = true;
+            this.chListBox2.Location = new System.Drawing.Point(398, 201);
+            this.chListBox2.Name = "chListBox2";
+            this.chListBox2.Size = new System.Drawing.Size(226, 88);
+            this.chListBox2.TabIndex = 26;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(394, 310);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(129, 20);
+            this.label14.TabIndex = 29;
+            this.label14.Text = "Игровые сессии";
+            // 
+            // chListBox3
+            // 
+            this.chListBox3.CheckOnClick = true;
+            this.chListBox3.FormattingEnabled = true;
+            this.chListBox3.Location = new System.Drawing.Point(398, 346);
+            this.chListBox3.Name = "chListBox3";
+            this.chListBox3.Size = new System.Drawing.Size(226, 88);
+            this.chListBox3.TabIndex = 28;
+            // 
+            // btn1Print
+            // 
+            this.btn1Print.Location = new System.Drawing.Point(515, 459);
+            this.btn1Print.Name = "btn1Print";
+            this.btn1Print.Size = new System.Drawing.Size(109, 35);
+            this.btn1Print.TabIndex = 30;
+            this.btn1Print.Text = "Печать";
+            this.btn1Print.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(362, 459);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 35);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "Сохранить";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btn2When
+            // 
+            this.btn2When.Location = new System.Drawing.Point(209, 459);
+            this.btn2When.Name = "btn2When";
+            this.btn2When.Size = new System.Drawing.Size(109, 35);
+            this.btn2When.TabIndex = 32;
+            this.btn2When.Text = "Проверить";
+            this.btn2When.UseVisualStyleBackColor = true;
+            // 
+            // Person
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 444);
+            this.ClientSize = new System.Drawing.Size(659, 506);
+            this.Controls.Add(this.btn2When);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn1Print);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.chListBox3);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.chListBox2);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.chListBox1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -287,7 +386,7 @@
             this.Controls.Add(this.txtBoxExp);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtBoxName);
-            this.Name = "Form8";
+            this.Name = "Person";
             this.Text = "Персонаж";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -321,5 +420,14 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckedListBox chListBox1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.CheckedListBox chListBox2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.CheckedListBox chListBox3;
+        private System.Windows.Forms.Button btn1Print;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn2When;
     }
 }

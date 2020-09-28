@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using GameConsult1.Models;
+using Newtonsoft.Json;
 
 namespace GameConsult1.Controllers
 {
@@ -19,7 +20,6 @@ namespace GameConsult1.Controllers
         // GET: api/People
         public IQueryable<Person> GetPeople()
         {
-            
             return db.People
                 .Include("Spells")
                 .Include("GameSessions")
@@ -31,18 +31,18 @@ namespace GameConsult1.Controllers
         [ResponseType(typeof(Person))]
         public IHttpActionResult GetPerson(int id)
         {
+        
             Person person = db.People
                 .Include("Spells")
                 .Include("GameSessions")
                 .Include("Items")
                 .Include("Race")
-                .Where(p => p.Id == id).FirstOrDefault();
+                
             if (person == null)
             {
                 return NotFound();
             }
-
-            return Ok(person);
+            return Json(person, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
         }
 
         // PUT: api/People/5
