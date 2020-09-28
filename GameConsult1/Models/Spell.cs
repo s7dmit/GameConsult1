@@ -13,7 +13,6 @@ namespace GameConsult1.Models
         public string Title { get; set; }
         public int LevelSpell { get; set; }
 
-        //многие ко многим
         public Spell()
         {
             People = new List<Person>();

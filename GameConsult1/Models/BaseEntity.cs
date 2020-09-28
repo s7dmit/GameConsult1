@@ -6,10 +6,7 @@ using System.Web;
 
 namespace GameConsult1.Models
 {
-   // [KnownType(typeof(BaseEntity))]
-
     [Serializable]
-
     [KnownType(typeof(Spell))]
     [KnownType(typeof(GameSession))]
     [KnownType(typeof(Item))]
