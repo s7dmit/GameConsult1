@@ -7,7 +7,7 @@ using System.Web;
 
 namespace GameConsult1.Models
 {
-    [KnownType(typeof(Item))]
+    //[KnownType(typeof(Item))]
     public class Item : BaseEntity
     {
         public string Title { get; set; }

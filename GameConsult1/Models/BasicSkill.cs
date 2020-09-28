@@ -6,7 +6,7 @@ using System.Web;
 
 namespace GameConsult1.Models
 {
-    [KnownType(typeof(BasicSkill))]
+    //[KnownType(typeof(BasicSkill))]
     public class BasicSkill:BaseEntity
     {
         public string Name { get; set; }

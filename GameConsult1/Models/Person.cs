@@ -7,9 +7,10 @@ using System.Web;
 
 namespace GameConsult1.Models
 {
-    [KnownType(typeof(Person))]
+    //[KnownType(typeof(Person))]
     public class Person:BaseEntity
     {
+        //Связь один ко многим
         public int? PlayerId { get; set; }
         public Player Player { get; set; }
 
